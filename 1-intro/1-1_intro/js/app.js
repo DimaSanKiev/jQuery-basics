@@ -1,3 +1,7 @@
 //Hide Warning
 //Show Warning Slowly
-$(".warning").hide().show("slow");
+var myCode = function () {
+    $(".warning").hide().show("slow");
+};
+
+$(document).ready(myCode);
