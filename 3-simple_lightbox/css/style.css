@@ -32,7 +32,6 @@ a {
     text-decoration: none;
 }
 
-/** Start Coding Here **/
 #overlay {
     background: rgba(0, 0, 0, 0.75);
     width: 100%;
@@ -41,4 +40,9 @@ a {
     top: 0;
     left: 0;
     display: none;
+    text-align: center;
+}
+
+#overlay img {
+    margin-top: 10%;
 }

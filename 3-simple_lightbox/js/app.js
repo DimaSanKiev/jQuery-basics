@@ -2,20 +2,30 @@
 // Solution: create an overlay with the large image - lightbox
 
 var $overlay = $('<div id="overlay"></div>');
+var $image = $("<img>");
+
+// An image to overlay
+$overlay.append($image);
+
 // Add overlay
 $("body").append($overlay);
-    // An image
     // A caption
 
 // Capture the click event on a link to an image
 $("#imageGallery a").click(function (event) {
     event.preventDefault();
-    var href = $(this).attr("href");
-    $overlay.show();
+    var imageLocation = $(this).attr("href");
+    // Update overlay with the image linked in the link
+    $image.attr("src", imageLocation);
+
     // Show the overlay
-    //  Update overlay with the image linked in the link
-    //  Get child's alt attribute and set caption
+    $overlay.show();
+
+    // Get child's alt attribute and set caption
 });
 
 // When overlay is clicked
-//  Hide the overlay
+$overlay.click(function () {
+    // Hide the overlay
+    $overlay.hide();
+});
