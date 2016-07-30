@@ -56,3 +56,20 @@ p {
     text-align: center;
     color: #777;
 }
+
+/**
+Modify CSS to hide links on small width and show button and select
+Also hides select and button on large width and show's links
+*/
+
+@media (min-width: 100px) and (max-width: 568px) {
+    #menu ul {
+        display: none;
+    }
+}
+
+@media (min-width: 568px) {
+    #menu select, #menu button {
+        display: none;
+    }
+}
