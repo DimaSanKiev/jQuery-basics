@@ -14,7 +14,10 @@ $(".controls li").click(function () {
 });
 
 // When new color is pressed
+$("#revealColorSelect").click(function () {
     // show color select or hide the color select
+    $("#colorSelect").toggle();
+});
 
 // When color sliders change
     // update the new color span
